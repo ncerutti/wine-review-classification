@@ -39,7 +39,7 @@ while i<5000:
             w=csv.DictWriter(f,keys)
             w.writerows(data)
     except:
-        print ("FINITE LE REVIEW, OPPURE ERRORE, A PAGINA " + str(i-1)) #SCRITTO SBAGLIATO, MA STICAZZI
+        print ("FINITE LE REVIEW, OPPURE ERRORE, A PAGINA " + str(i-1)) #SCRITTO SBAGLIATO, MA PACE
 
 
 #for item in oggettone["reviews"]:
