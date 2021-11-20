@@ -13,7 +13,7 @@ import time
 vino = 1794
 i=1
 
-req = urllib.request.Request("https://www.vivino.com/api/wines/" + str(vino)+ "/reviews?year=null&page=" + str(i)) #CONTROLLA SINTASSI
+req = urllib.request.Request("https://www.vivino.com/api/wines/" + str(vino)+ "/reviews?year=null&page=" + str(i))
 req.add_header("Accept", "application/json")
 jason = urllib.request.urlopen(req).read()
 oggettone = json.loads(jason,encoding='UTF-8')
@@ -31,7 +31,7 @@ while i<5000:
     req = urllib.request.Request(stringa) #CONTROLLA SINTASSI
     req.add_header("Accept", "application/json")
     jason = urllib.request.urlopen(req).read()
-    time.sleep(1)
+    time.sleep(1500)
     try:
         oggettone = json.loads(jason,encoding='UTF-8')
         data = oggettone.get("reviews")
@@ -39,7 +39,7 @@ while i<5000:
             w=csv.DictWriter(f,keys)
             w.writerows(data)
     except:
-        print ("FINITE LE REVIEW, OPPURE ERRORE, A PAGINA " + str(i-1)) #SCRITTO SBAGLIATO, MA PACE
+        print ("REVIEWS DONE (OR ERROR OCCURED) ON PAGE " + str(i-1))
 
 
 #for item in oggettone["reviews"]:
