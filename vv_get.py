@@ -39,7 +39,7 @@ while i<5000:
             w=csv.DictWriter(f,keys)
             w.writerows(data)
     except:
-        print ("REVIEWS DONE (OR ERROR OCCURED) ON PAGE " + str(i-1))
+        print ("REVIEWS DONE ON PAGE " + str(i-1))
 
 
 #for item in oggettone["reviews"]:
