@@ -18,7 +18,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics import accuracy_score
 import tensorflow
 
-df = pd.read_csv("D:/Nextcloud/applications/20211120_UniPotsdam/scraping_ml/dset.csv")
+df = pd.read_csv("./data/dset.csv")
 listid = []
 for item, row in df.iterrows():
     if isinstance(row['text'], str):
